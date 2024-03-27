@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Messages</title>
+</head>
+<body>
+    <div id="chat">
+        {% for message in messages %}
+            {% if message['role'] != 'system' %}
+                <p><strong>{{ message['role'] }}:</strong> "{{ message['content'] }}"</p><br>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html></div>
